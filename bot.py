@@ -2,6 +2,7 @@ import csv
 import json
 import time
 import random
+
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
@@ -16,7 +17,8 @@ from telegram.ext import (
 )
 
 # === הגדרות בסיס ===
-TOKEN = "8387057550:AAEvuFYhI5N_blHJQC297Etw2q-u-KgIhu0"  # חשוב: להחליף לפני העלאה לגיטהאב!
+import os
+TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 DATA_FILE = Path("Chance.csv")      # קובץ הנתונים של הצ'אנס
 
 KNOWN_COMMANDS = {
